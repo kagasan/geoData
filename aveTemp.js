@@ -7,8 +7,10 @@
  * 使い方
  * 首里城の1月気温を求める場合
  * console.log(AveTemp.nearTemperature(26.2204565,127.710506,1));
+ * {min: 16.3, max: 21.4, message: "気象庁の過去データを加工して作成したデータです。那覇・1月・平均最小気温・平均最大気温"}
  * 旭川動物園の1月気温を求める場合
  * console.log(AveTemp.nearTemperature(43.767309722222,142.417593333333,1));
+ * {min: -11.7, max: -3, message: "気象庁の過去データを加工して作成したデータです。旭川・1月・平均最小気温・平均最大気温"}
  */
 class AveTemp{
   static data = [
@@ -428,7 +430,7 @@ class AveTemp{
     return {
       min: res.min[month],
       max: res.max[month],
-      message: `気象庁の過去データを加工して作成したデータです。${res.name}・${month}月・平均最小・平均最大気温`
+      message: `気象庁の過去データを加工して作成したデータです。${res.name}・${month}月・平均最小気温・平均最大気温`
     };
   }
 };
